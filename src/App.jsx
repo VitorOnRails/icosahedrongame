@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Dado from "./components/Dado";
+import Aurora from "./components/Aurora";
+import Particulas from "./components/Particulas";
 
 const App = () => {
   const [rolando, setRolando] = useState(false);
@@ -19,7 +21,9 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-purple-950 flex flex-col items-center justify-center gap-8">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-8">
+      <Aurora />
+      <Particulas />
       <h1 className="text-white text-5xl font-cinzel tracking-wide">Icosahedron</h1>
 
       <div onClick={rolarDado}>
