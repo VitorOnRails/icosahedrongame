@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @layer utilities {
-  .font-cinzel {
-    font-family: "Cinzel";
+  .font-pixelify {
+    font-family: "Pixelify Sans";
   };
 };
 
