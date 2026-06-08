@@ -28,10 +28,17 @@ const Particulas = () => {
             particulas.forEach(particula => {
                 particula.x += particula.velocidadeX;
                 particula.y += particula.velocidadeY;
-                context.beginPath();
-                context.arc(particula.x, particula.y, particula.tamanho, 0, Math.PI * 2);
-                context.fillStyle = "#00ff00";
-                context.fill();
+                
+                const raio = particula.tamanho;
+
+                for (let dx = -raio; dx <= raio; dx++) {
+                for (let dy = -raio; dy <= raio; dy++) {
+                    if (dx * dx + dy * dy <= raio * raio) {
+                        context.fillStyle = "#80ff80";
+                        context.fillRect(particula.x + dx, particula.y + dy, 1, 1);
+                    };
+                };
+                };
             });
             requestAnimationFrame(animar);
         };
