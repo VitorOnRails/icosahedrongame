@@ -21,7 +21,7 @@ const ModeloDado = ({ rolando }) => {
 
 const Dado = ({ rolando }) => {
   return (
-    <div className="w-96 h-96 cursor-pointer">
+    <div className="w-64 h-64 lg:w-96 lg:h-96 cursor-pointer">
       <Canvas camera={{ position: [0, 0, 80] }} gl={{ alpha: true }} style={{ background: "transparent" }} onCreated={({ scene }) => { scene.background = null; }} >
         <ambientLight intensity={1.5} />
         <directionalLight position={[5, 5, 5]} intensity={2} />
